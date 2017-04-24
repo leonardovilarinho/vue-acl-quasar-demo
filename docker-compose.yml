@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    image: your-docker-org/your-app-name
+    command: sh
+    volumes:
+      - .:/opt/app
+      - /opt/app/node_modules
+    ports:
+      - 3333:3333
+    tty: true
